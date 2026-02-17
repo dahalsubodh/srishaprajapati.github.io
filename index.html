@@ -2,129 +2,191 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Srisha Prajapati | Blogs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srisha Prajapati | Blogs</title>
+   <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&family=Playfair+Display:italic@700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Space Grotesk', sans-serif; cursor: crosshair; }
+        .serif-italic { font-family: 'Playfair Display', serif; font-style: italic; }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in { animation: fadeIn 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-8px) rotate(0.5deg); }
+        }
+        .animate-float { animation: float 8s ease-in-out infinite; }
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+        @keyframes flutter {
+            0%, 100% { transform: skewX(0deg) translateY(0); }
+            50% { transform: skewX(2deg) translateY(-2px); }
+        }
+        .animate-flutter { animation: flutter 5s ease-in-out infinite; }
 
-    <!-- Main Styles -->
-    <link rel="stylesheet" href="style.css">
+        #cursor-blur {
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(212, 163, 115, 0.1) 0%, rgba(249,247,242,0) 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+            transition: transform 0.15s ease-out;
+        }
+
+        .grain {
+            position: fixed;
+            inset: 0;
+            background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+            opacity: 0.15;
+            pointer-events: none;
+            z-index: 50;
+        }
+
+        .building-badge {
+            background: rgba(212, 163, 115, 0.08);
+            border: 0.5px solid rgba(212, 163, 115, 0.2);
+            color: #b08968;
+            backdrop-filter: blur(4px);
+        }
+
+        .prayer-flag {
+            opacity: 0.12;
+            filter: saturate(0.8);
+        }
+    </style>
 </head>
-
-<body>
-
-    <!-- Cursor Glow -->
-    <div id="cursor-blur"></div>
-
-    <!-- Grain Overlay -->
+<body class="bg-[#FAF9F6] text-[#333230] min-h-screen flex flex-col justify-between p-6 md:p-12 relative overflow-hidden">
+    
+    <div id="cursor-blur" class="hidden md:block"></div>
     <div class="grain"></div>
-
-    <!-- Prayer Flags -->
-    <div class="prayer-wrapper">
+    
+    <!-- Dimmed Prayer Flags Background -->
+    <div class="absolute top-0 left-0 w-full h-32 md:h-48 z-0 pointer-events-none">
         <svg width="100%" height="100%" viewBox="0 0 1000 120" preserveAspectRatio="none" class="animate-flutter">
-            <path d="M0,25 Q250,70 500,25 T1000,25"
-                  fill="none"
-                  stroke="#333230"
-                  stroke-width="0.1"
-                  stroke-dasharray="2 2"
-                  opacity="0.3" />
-
-            <rect x="50" y="35" width="30" height="40" fill="#2563eb" class="prayer-flag" />
-            <rect x="130" y="45" width="30" height="40" fill="#ffffff" class="prayer-flag" stroke="#ccc" stroke-width="0.1" />
-            <rect x="210" y="50" width="30" height="40" fill="#dc2626" class="prayer-flag" />
-            <rect x="290" y="48" width="30" height="40" fill="#16a34a" class="prayer-flag" />
-            <rect x="370" y="42" width="30" height="40" fill="#facc15" class="prayer-flag" />
+            <path d="M0,25 Q250,70 500,25 T1000,25" fill="none" stroke="#333230" stroke-width="0.1" stroke-dasharray="2 2" opacity="0.3" />
+            <rect x="50" y="35" width="30" height="40" fill="#2563eb" class="prayer-flag" transform="rotate(-5 50 35)" />
+            <rect x="130" y="45" width="30" height="40" fill="#ffffff" class="prayer-flag" stroke="#ccc" stroke-width="0.1" transform="rotate(2 130 45)" />
+            <rect x="210" y="50" width="30" height="40" fill="#dc2626" class="prayer-flag" transform="rotate(-3 210 50)" />
+            <rect x="290" y="48" width="30" height="40" fill="#16a34a" class="prayer-flag" transform="rotate(5 290 48)" />
+            <rect x="370" y="42" width="30" height="40" fill="#facc15" class="prayer-flag" transform="rotate(-2 370 42)" />
         </svg>
     </div>
 
-    <!-- Header -->
-    <header class="fade-in">
-        <div>
-            <span class="small-caps">Kathmandu / Nepal</span>
-            <h1>
-                SRISHA
-                <span class="serif-italic">prajapati</span>
+    <!-- Header Section -->
+    <header class="z-20 flex justify-between items-start fade-in" style="animation-delay: 0.2s;">
+        <div class="flex flex-col">
+            <span class="text-[10px] tracking-[0.4em] uppercase opacity-40 mb-2">Kathmandu / Nepal</span>
+            <h1 class="text-2xl font-medium tracking-tighter leading-none">
+                SRISHA <span class="serif-italic lowercase text-3xl text-[#b08968]">prajapati</span>
             </h1>
         </div>
-
-        <div class="building-badge">
-            Crafting our Story
+        <div class="flex flex-col items-end text-right">
+            <div class="building-badge px-4 py-1.5 rounded-full">
+                <span class="text-[9px] uppercase tracking-[0.2em]">Crafting our Story</span>
+            </div>
         </div>
     </header>
 
-    <!-- Main -->
-    <main>
-
-        <!-- Illustration -->
-        <div class="animate-float fade-in">
-            <svg viewBox="0 0 340 280" xmlns="http://www.w3.org/2000/svg">
-                <path d="M120 220 C120 200, 150 190, 180 195 L220 205 C240 210, 245 230, 240 245 L130 245 C120 245, 120 230, 120 220"
-                      fill="#FACC15"
-                      stroke="#333230"
-                      stroke-width="1.5" />
-
+    <!-- Main Narrative Area -->
+    <main class="z-10 flex flex-col items-center justify-center flex-grow py-8 text-center">
+        
+        <!-- Whimsical Illustration: Srisha & Husband on a Scooter with Adventure Balloons -->
+        <div class="animate-float mb-6 md:mb-8 fade-in" style="animation-delay: 0.4s;">
+            <svg width="340" height="280" viewBox="0 0 340 280" fill="none" xmlns="http://www.w3.org/2000/svg" class="md:w-[480px] md:h-[400px]">
+                <!-- Scooter -->
+                <path d="M120 220 C120 200, 150 190, 180 195 L220 205 C240 210, 245 230, 240 245 L130 245 C120 245, 120 230, 120 220" fill="#FACC15" stroke="#333230" stroke-width="1.5" />
                 <circle cx="145" cy="245" r="18" fill="#333230" />
                 <circle cx="225" cy="245" r="18" fill="#333230" />
+                <path d="M120 210 L110 170" stroke="#333230" stroke-width="1.5" /> <!-- Handlebar -->
+                <circle cx="110" cy="170" r="6" fill="#FACC15" stroke="#333230" stroke-width="1" /> <!-- Headlight -->
+
+                <!-- Srisha (The Pilot) -->
+                <circle cx="155" cy="155" r="12" fill="#FAF9F6" stroke="#333230" stroke-width="1.2" /> <!-- Face -->
+                <path d="M150 167 L145 200 L165 200 L160 167" fill="#dc2626" stroke="#333230" stroke-width="1.2" opacity="0.8" /> <!-- Dress -->
+                <path d="M155 143 Q140 143, 140 155" stroke="#333230" stroke-width="1.5" stroke-linecap="round" /> <!-- Hair Detail -->
+                
+                <!-- Husband (Floating with Balloons) -->
+                <path d="M220 185 C240 185, 260 170, 280 170" stroke="#333230" stroke-width="1" stroke-dasharray="2 2" /> <!-- Attachment -->
+                <circle cx="290" cy="170" r="10" fill="#FAF9F6" stroke="#333230" stroke-width="1.2" /> <!-- Husband Face -->
+                <path d="M290 180 L310 180" fill="#2563eb" stroke="#333230" stroke-width="1" opacity="0.7" /> <!-- Shirt -->
+                
+                <!-- Adventure Balloons (The Colors of Nepal) -->
+                <line x1="290" y1="160" x2="270" y2="80" stroke="#333230" stroke-width="0.5" />
+                <line x1="290" y1="160" x2="295" y2="70" stroke="#333230" stroke-width="0.5" />
+                <line x1="290" y1="160" x2="320" y2="90" stroke="#333230" stroke-width="0.5" />
+                
+                <ellipse cx="270" cy="70" rx="10" ry="14" fill="#dc2626" stroke="#333230" stroke-width="1" opacity="0.9" /> <!-- Red Balloon -->
+                <ellipse cx="295" cy="55" rx="10" ry="14" fill="#FACC15" stroke="#333230" stroke-width="1" opacity="0.9" /> <!-- Yellow Balloon -->
+                <ellipse cx="320" cy="75" rx="10" ry="14" fill="#2563eb" stroke="#333230" stroke-width="1" opacity="0.9" /> <!-- Blue Balloon -->
+
+                <!-- Distant Himalayan Line -->
+                <path d="M20 260 Q80 230 140 255 T320 250" stroke="#b08968" stroke-width="0.5" opacity="0.3" />
             </svg>
         </div>
 
-        <!-- Narrative -->
-        <section class="fade-in">
-            <p class="tagline">Rooted in Love, Bound for the Peaks</p>
-
-            <h2 class="hero-heading">
-                Building a space for<br>
-                <span class="serif-italic highlight">
-                    loving care & shared horizons.
-                </span>
+        <div class="fade-in max-w-2xl px-4" style="animation-delay: 0.6s;">
+            <p class="text-[10px] uppercase tracking-[0.5em] mb-8 opacity-40 text-[#b08968]">Rooted in Love, Bound for the Peaks</p>
+            
+            <h2 class="text-3xl md:text-5xl font-light tracking-tight mb-10 leading-snug">
+                Building a space for <br class="hidden md:block"> 
+                <span class="serif-italic border-b border-[#b08968]/30 text-[#b08968]">loving care & shared horizons.</span>
             </h2>
-
-            <p class="description">
-                Whether navigating the daily ride of life or floating through the high
-                trails of Nepal, Srisha’s world is anchored by the warmth of family
-                and the deep bond with her husband. These moments of adventure
-                and devotion are slowly being woven into a digital home.
-            </p>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer>
-
-        <div>
-            <span class="small-caps">Our Essence</span>
-            <div class="footer-links">
-                <span>Togetherness</span>
-                <span>Adventure</span>
-                <span><em>Kathmandu.</em></span>
+            
+            <div class="flex flex-col items-center gap-8">
+                <p class="text-sm md:text-base opacity-70 leading-relaxed font-light text-[#4a4947]">
+                    Whether navigating the daily ride of life or floating through the high trails of Nepal, Srisha’s world is anchored by the warmth of family and the deep bond with her husband. We are weaving together these moments of adventure and devotion into a digital home.
+                </p>
+                
+                <div class="flex items-center gap-4 py-2">
+                    <span class="text-[10px] uppercase tracking-widest opacity-30 italic">Currently curating the adventure...</span>
+                </div>
             </div>
         </div>
+    </main>
 
-        <div>
-            <div class="footer-links">
-                <a href="#">Instagram</a>
-                <a href="#">LinkedIn</a>
-                <a href="mailto:hello@srisha.com">Contact</a>
+    <!-- Detailed Footer -->
+    <footer class="z-20 flex flex-col md:flex-row justify-between items-end md:items-center gap-8 fade-in" style="animation-delay: 0.8s;">
+        <div class="flex flex-col gap-3">
+            <span class="text-[9px] uppercase tracking-widest opacity-30">Our Essence</span>
+            <div class="flex gap-6 text-[11px] uppercase tracking-[0.2em] font-medium text-[#b08968]">
+                <span class="hover:opacity-50 cursor-default transition-opacity">Togetherness</span>
+                <span class="hover:opacity-50 cursor-default transition-opacity">Adventure</span>
+                <span class="hover:opacity-50 cursor-default transition-opacity italic underline decoration-1 underline-offset-4">Kathmandu.</span>
             </div>
-
-            <div class="small-caps">
+        </div>
+        
+        <div class="flex flex-col md:items-end gap-3">
+            <div class="flex gap-6 text-[10px] uppercase tracking-[0.3em] font-medium">
+                <a href="#" class="hover:text-[#b08968] transition-colors">Instagram</a>
+                <a href="#" class="hover:text-[#b08968] transition-colors">LinkedIn</a>
+                <a href="mailto:hello@srisha.com" class="hover:text-[#b08968] transition-colors">Contact</a>
+            </div>
+            <div class="text-[9px] opacity-30 tracking-[0.2em] uppercase mt-1">
                 © MMXXVI • Hand-drawn with love in Nepal
             </div>
         </div>
-
     </footer>
 
-    <!-- Cursor Script -->
     <script>
         const cursor = document.getElementById('cursor-blur');
-
         document.addEventListener('mousemove', (e) => {
             cursor.style.left = e.clientX + 'px';
             cursor.style.top = e.clientY + 'px';
         });
-    </script>
 
+        // Parallax for the SVG elements
+        document.addEventListener('mousemove', (e) => {
+            const moveX = (e.clientX - window.innerWidth / 2) * 0.01;
+            const moveY = (e.clientY - window.innerHeight / 2) * 0.01;
+            document.querySelector('main svg').style.transform = `translate(${moveX}px, ${moveY}px)`;
+        });
+    </script>
 </body>
 </html>
