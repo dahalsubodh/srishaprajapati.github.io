@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Srisha Prajapati | Digital Archive</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Cursor Glow -->
+    <div id="cursor-blur"></div>
+
+    <!-- Grain Overlay -->
+    <div class="grain"></div>
+
+    <!-- Prayer Flags -->
+    <div class="prayer-wrapper">
+        <svg width="100%" height="100%" viewBox="0 0 1000 120" preserveAspectRatio="none" class="animate-flutter">
+            <path d="M0,25 Q250,70 500,25 T1000,25"
+                  fill="none"
+                  stroke="#333230"
+                  stroke-width="0.1"
+                  stroke-dasharray="2 2"
+                  opacity="0.3" />
+
+            <rect x="50" y="35" width="30" height="40" fill="#2563eb" class="prayer-flag" />
+            <rect x="130" y="45" width="30" height="40" fill="#ffffff" class="prayer-flag" stroke="#ccc" stroke-width="0.1" />
+            <rect x="210" y="50" width="30" height="40" fill="#dc2626" class="prayer-flag" />
+            <rect x="290" y="48" width="30" height="40" fill="#16a34a" class="prayer-flag" />
+            <rect x="370" y="42" width="30" height="40" fill="#facc15" class="prayer-flag" />
+        </svg>
+    </div>
+
+    <!-- Header -->
+    <header class="fade-in">
+        <div>
+            <span class="small-caps">Kathmandu / Nepal</span>
+            <h1>
+                SRISHA
+                <span class="serif-italic">prajapati</span>
+            </h1>
+        </div>
+
+        <div class="building-badge">
+            Crafting our Story
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+
+        <!-- Illustration -->
+        <div class="animate-float fade-in">
+            <svg viewBox="0 0 340 280" xmlns="http://www.w3.org/2000/svg">
+                <path d="M120 220 C120 200, 150 190, 180 195 L220 205 C240 210, 245 230, 240 245 L130 245 C120 245, 120 230, 120 220"
+                      fill="#FACC15"
+                      stroke="#333230"
+                      stroke-width="1.5" />
+
+                <circle cx="145" cy="245" r="18" fill="#333230" />
+                <circle cx="225" cy="245" r="18" fill="#333230" />
+            </svg>
+        </div>
+
+        <!-- Narrative -->
+        <section class="fade-in">
+            <p class="tagline">Rooted in Love, Bound for the Peaks</p>
+
+            <h2 class="hero-heading">
+                Building a space for<br>
+                <span class="serif-italic highlight">
+                    loving care & shared horizons.
+                </span>
+            </h2>
+
+            <p class="description">
+                Whether navigating the daily ride of life or floating through the high
+                trails of Nepal, Srisha’s world is anchored by the warmth of family
+                and the deep bond with her husband. These moments of adventure
+                and devotion are slowly being woven into a digital home.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+
+        <div>
+            <span class="small-caps">Our Essence</span>
+            <div class="footer-links">
+                <span>Togetherness</span>
+                <span>Adventure</span>
+                <span><em>Kathmandu.</em></span>
+            </div>
+        </div>
+
+        <div>
+            <div class="footer-links">
+                <a href="#">Instagram</a>
+                <a href="#">LinkedIn</a>
+                <a href="mailto:hello@srisha.com">Contact</a>
+            </div>
+
+            <div class="small-caps">
+                © MMXXVI • Hand-drawn with love in Nepal
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Cursor Script -->
+    <script>
+        const cursor = document.getElementById('cursor-blur');
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+    </script>
+
+</body>
+</html>
