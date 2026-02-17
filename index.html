@@ -55,17 +55,34 @@
     <main>
 
         <!-- Illustration -->
-        <div class="animate-float fade-in">
-            <svg viewBox="0 0 340 280" xmlns="http://www.w3.org/2000/svg">
-                <path d="M120 220 C120 200, 150 190, 180 195 L220 205 C240 210, 245 230, 240 245 L130 245 C120 245, 120 230, 120 220"
-                      fill="#FACC15"
-                      stroke="#333230"
-                      stroke-width="1.5" />
-
+        <-- Whimsical Illustration -->
+        <div class="animate-float mb-6 md:mb-8 fade-in" style="animation-delay: 0.4s;">
+            <svg width="340" height="280" viewBox="0 0 340 280" fill="none" xmlns="http://www.w3.org/2000/svg" class="md:w-[480px] md:h-[400px]">
+                <!-- Scooter -->
+                <path d="M120 220 C120 200, 150 190, 180 195 L220 205 C240 210, 245 230, 240 245 L130 245 C120 245, 120 230, 120 220" fill="#FACC15" stroke="#333230" stroke-width="1.5" />
                 <circle cx="145" cy="245" r="18" fill="#333230" />
                 <circle cx="225" cy="245" r="18" fill="#333230" />
-            </svg>
-        </div>
+                <path d="M120 210 L110 170" stroke="#333230" stroke-width="1.5" /> 
+                <circle cx="110" cy="170" r="6" fill="#FACC15" stroke="#333230" stroke-width="1" /> 
+
+                <!-- Person 1 (Driver) -->
+                <circle cx="155" cy="155" r="12" fill="#FAF9F6" stroke="#333230" stroke-width="1.2" />
+                <path d="M150 167 L145 200 L165 200 L160 167" fill="#dc2626" stroke="#333230" stroke-width="1.2" opacity="0.8" /> 
+                <path d="M155 143 Q140 143, 140 155" stroke="#333230" stroke-width="1.5" stroke-linecap="round" />
+                
+                <!-- Person 2 (Passenger/Balloons) -->
+                <path d="M220 185 C240 185, 260 170, 280 170" stroke="#333230" stroke-width="1" stroke-dasharray="2 2" />
+                <circle cx="290" cy="170" r="10" fill="#FAF9F6" stroke="#333230" stroke-width="1.2" />
+                <path d="M290 180 L310 180" fill="#2563eb" stroke="#333230" stroke-width="1" opacity="0.7" />
+                
+                <!-- Adventure Balloons -->
+                <line x1="290" y1="160" x2="270" y2="80" stroke="#333230" stroke-width="0.5" />
+                <line x1="290" y1="160" x2="295" y2="70" stroke="#333230" stroke-width="0.5" />
+                <line x1="290" y1="160" x2="320" y2="90" stroke="#333230" stroke-width="0.5" />
+                
+                <ellipse cx="270" cy="70" rx="10" ry="14" fill="#dc2626" stroke="#333230" stroke-width="1" opacity="0.9" />
+                <ellipse cx="295" cy="55" rx="10" ry="14" fill="#FACC15" stroke="#333230" stroke-width="1" opacity="0.9" />
+                <ellipse cx="320" cy="75" rx="10" ry="14" fill="#2563eb" stroke="#333230" stroke-width="1" opacity="0.9" />
 
         <!-- Narrative -->
         <section class="fade-in">
