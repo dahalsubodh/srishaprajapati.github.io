@@ -17,20 +17,113 @@
   <div class="grain" aria-hidden="true"></div>
   <div class="cursor-glow" aria-hidden="true"></div>
 
-  <!-- Prayer flag string — the signature motif, flutters on every device -->
+  <!-- Nepali Prayer flag string — the signature motif, flutters on every device -->
   <div class="flag-line" aria-hidden="true">
-    <svg viewBox="0 0 1000 90" preserveAspectRatio="none">
-      <path class="flag-string" d="M0,20 Q250,55 500,20 T1000,20" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="1 5" opacity="0.35" />
-      <rect class="flag" x="60"  y="26" width="26" height="34" rx="1" style="--c:var(--indigo); animation-delay:0s"></rect>
-      <rect class="flag" x="140" y="34" width="26" height="34" rx="1" style="--c:var(--paper); animation-delay:.35s"></rect>
-      <rect class="flag" x="220" y="38" width="26" height="34" rx="1" style="--c:var(--brick); animation-delay:.7s"></rect>
-      <rect class="flag" x="300" y="36" width="26" height="34" rx="1" style="--c:var(--moss); animation-delay:1.05s"></rect>
-      <rect class="flag" x="380" y="30" width="26" height="34" rx="1" style="--c:var(--marigold); animation-delay:1.4s"></rect>
-      <rect class="flag" x="620" y="30" width="26" height="34" rx="1" style="--c:var(--indigo); animation-delay:.2s"></rect>
-      <rect class="flag" x="700" y="36" width="26" height="34" rx="1" style="--c:var(--paper); animation-delay:.55s"></rect>
-      <rect class="flag" x="780" y="38" width="26" height="34" rx="1" style="--c:var(--brick); animation-delay:.9s"></rect>
-      <rect class="flag" x="860" y="34" width="26" height="34" rx="1" style="--c:var(--moss); animation-delay:1.25s"></rect>
-      <rect class="flag" x="930" y="28" width="26" height="34" rx="1" style="--c:var(--marigold); animation-delay:1.6s"></rect>
+    <svg viewBox="0 0 1000 100" preserveAspectRatio="none">
+      <!-- String -->
+      <path class="flag-string" d="M0,20 Q250,55 500,20 T1000,20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 6" opacity="0.4" />
+      
+      <!-- Flag set 1 -->
+      <g class="flag" style="--c:var(--indigo); animation-delay:0s">
+        <g transform="translate(60, 26)">
+          <rect width="30" height="40" rx="2" fill="var(--indigo)" stroke="var(--ink)" stroke-width="0.8"/>
+          <text x="15" y="24" font-family="var(--display)" font-size="18" font-weight="bold" fill="var(--paper)" text-anchor="middle" opacity="0.8">ॐ</text>
+          <circle cx="8" cy="8" r="1.5" fill="var(--paper)" opacity="0.6"/>
+          <circle cx="22" cy="12" r="1.5" fill="var(--paper)" opacity="0.6"/>
+          <circle cx="15" cy="35" r="1.5" fill="var(--paper)" opacity="0.6"/>
+        </g>
+      </g>
+      
+      <g class="flag" style="--c:var(--brick); animation-delay:.35s">
+        <g transform="translate(140, 34)">
+          <rect width="30" height="40" rx="2" fill="var(--brick)" stroke="var(--ink)" stroke-width="0.8"/>
+          <text x="15" y="24" font-family="var(--display)" font-size="18" font-weight="bold" fill="var(--paper)" text-anchor="middle" opacity="0.8">ॐ</text>
+          <circle cx="8" cy="8" r="1.5" fill="var(--paper)" opacity="0.6"/>
+          <circle cx="22" cy="12" r="1.5" fill="var(--paper)" opacity="0.6"/>
+          <circle cx="15" cy="35" r="1.5" fill="var(--paper)" opacity="0.6"/>
+        </g>
+      </g>
+      
+      <g class="flag" style="--c:var(--marigold); animation-delay:.7s">
+        <g transform="translate(220, 38)">
+          <rect width="30" height="40" rx="2" fill="var(--marigold)" stroke="var(--ink)" stroke-width="0.8"/>
+          <text x="15" y="24" font-family="var(--display)" font-size="18" font-weight="bold" fill="var(--ink)" text-anchor="middle" opacity="0.8">ॐ</text>
+          <circle cx="8" cy="8" r="1.5" fill="var(--ink)" opacity="0.4"/>
+          <circle cx="22" cy="12" r="1.5" fill="var(--ink)" opacity="0.4"/>
+          <circle cx="15" cy="35" r="1.5" fill="var(--ink)" opacity="0.4"/>
+        </g>
+      </g>
+      
+      <g class="flag" style="--c:var(--moss); animation-delay:1.05s">
+        <g transform="translate(300, 36)">
+          <rect width="30" height="40" rx="2" fill="var(--moss)" stroke="var(--ink)" stroke-width="0.8"/>
+          <text x="15" y="24" font-family="var(--display)" font-size="18" font-weight="bold" fill="var(--paper)" text-anchor="middle" opacity="0.8">ॐ</text>
+          <circle cx="8" cy="8" r="1.5" fill="var(--paper)" opacity="0.6"/>
+          <circle cx="22" cy="12" r="1.5" fill="var(--paper)" opacity="0.6"/>
+          <circle cx="15" cy="35" r="1.5" fill="var(--paper)" opacity="0.6"/>
+        </g>
+      </g>
+      
+      <g class="flag" style="--c:var(--paper); animation-delay:1.4s">
+        <g transform="translate(380, 30)">
+          <rect width="30" height="40" rx="2" fill="var(--paper)" stroke="var(--ink)" stroke-width="0.8"/>
+          <text x="15" y="24" font-family="var(--display)" font-size="18" font-weight="bold" fill="var(--indigo)" text-anchor="middle" opacity="0.8">ॐ</text>
+          <circle cx="8" cy="8" r="1.5" fill="var(--indigo)" opacity="0.6"/>
+          <circle cx="22" cy="12" r="1.5" fill="var(--indigo)" opacity="0.6"/>
+          <circle cx="15" cy="35" r="1.5" fill="var(--indigo)" opacity="0.6"/>
+        </g>
+      </g>
+      
+      <!-- Flag set 2 -->
+      <g class="flag" style="--c:var(--indigo); animation-delay:.2s">
+        <g transform="translate(620, 30)">
+          <rect width="30" height="40" rx="2" fill="var(--indigo)" stroke="var(--ink)" stroke-width="0.8"/>
+          <text x="15" y="24" font-family="var(--display)" font-size="18" font-weight="bold" fill="var(--paper)" text-anchor="middle" opacity="0.8">ॐ</text>
+          <circle cx="8" cy="8" r="1.5" fill="var(--paper)" opacity="0.6"/>
+          <circle cx="22" cy="12" r="1.5" fill="var(--paper)" opacity="0.6"/>
+          <circle cx="15" cy="35" r="1.5" fill="var(--paper)" opacity="0.6"/>
+        </g>
+      </g>
+      
+      <g class="flag" style="--c:var(--brick); animation-delay:.55s">
+        <g transform="translate(700, 36)">
+          <rect width="30" height="40" rx="2" fill="var(--brick)" stroke="var(--ink)" stroke-width="0.8"/>
+          <text x="15" y="24" font-family="var(--display)" font-size="18" font-weight="bold" fill="var(--paper)" text-anchor="middle" opacity="0.8">ॐ</text>
+          <circle cx="8" cy="8" r="1.5" fill="var(--paper)" opacity="0.6"/>
+          <circle cx="22" cy="12" r="1.5" fill="var(--paper)" opacity="0.6"/>
+          <circle cx="15" cy="35" r="1.5" fill="var(--paper)" opacity="0.6"/>
+        </g>
+      </g>
+      
+      <g class="flag" style="--c:var(--marigold); animation-delay:.9s">
+        <g transform="translate(780, 38)">
+          <rect width="30" height="40" rx="2" fill="var(--marigold)" stroke="var(--ink)" stroke-width="0.8"/>
+          <text x="15" y="24" font-family="var(--display)" font-size="18" font-weight="bold" fill="var(--ink)" text-anchor="middle" opacity="0.8">ॐ</text>
+          <circle cx="8" cy="8" r="1.5" fill="var(--ink)" opacity="0.4"/>
+          <circle cx="22" cy="12" r="1.5" fill="var(--ink)" opacity="0.4"/>
+          <circle cx="15" cy="35" r="1.5" fill="var(--ink)" opacity="0.4"/>
+        </g>
+      </g>
+      
+      <g class="flag" style="--c:var(--moss); animation-delay:1.25s">
+        <g transform="translate(860, 34)">
+          <rect width="30" height="40" rx="2" fill="var(--moss)" stroke="var(--ink)" stroke-width="0.8"/>
+          <text x="15" y="24" font-family="var(--display)" font-size="18" font-weight="bold" fill="var(--paper)" text-anchor="middle" opacity="0.8">ॐ</text>
+          <circle cx="8" cy="8" r="1.5" fill="var(--paper)" opacity="0.6"/>
+          <circle cx="22" cy="12" r="1.5" fill="var(--paper)" opacity="0.6"/>
+          <circle cx="15" cy="35" r="1.5" fill="var(--paper)" opacity="0.6"/>
+        </g>
+      </g>
+      
+      <g class="flag" style="--c:var(--paper); animation-delay:1.6s">
+        <g transform="translate(930, 28)">
+          <rect width="30" height="40" rx="2" fill="var(--paper)" stroke="var(--ink)" stroke-width="0.8"/>
+          <text x="15" y="24" font-family="var(--display)" font-size="18" font-weight="bold" fill="var(--indigo)" text-anchor="middle" opacity="0.8">ॐ</text>
+          <circle cx="8" cy="8" r="1.5" fill="var(--indigo)" opacity="0.6"/>
+          <circle cx="22" cy="12" r="1.5" fill="var(--indigo)" opacity="0.6"/>
+          <circle cx="15" cy="35" r="1.5" fill="var(--indigo)" opacity="0.6"/>
+        </g>
+      </g>
     </svg>
   </div>
 
@@ -47,36 +140,75 @@
 
       <figure class="illustration reveal" aria-hidden="true">
         <svg viewBox="0 0 340 280" xmlns="http://www.w3.org/2000/svg">
-          <!-- Scooter -->
-          <path d="M120 220 C120 200, 150 190, 180 195 L220 205 C240 210, 245 230, 240 245 L130 245 C120 245, 120 230, 120 220" fill="var(--marigold)" stroke="var(--ink)" stroke-width="1.5" />
-          <circle cx="145" cy="245" r="18" fill="var(--ink)" />
-          <circle cx="225" cy="245" r="18" fill="var(--ink)" />
-          <path d="M120 210 L110 170" stroke="var(--ink)" stroke-width="1.5" />
-          <circle cx="110" cy="170" r="6" fill="var(--marigold)" stroke="var(--ink)" stroke-width="1" />
+          <!-- Road/horizon line -->
+          <line x1="0" y1="240" x2="340" y2="240" stroke="var(--ink)" stroke-width="1.5" opacity="0.3" />
+          <line x1="10" y1="245" x2="330" y2="245" stroke="var(--ink)" stroke-width="0.8" stroke-dasharray="3 4" opacity="0.2" />
+          
+          <!-- Mountains in background -->
+          <path d="M20 240 L60 160 L90 200 L130 120 L160 180 L200 100 L240 190 L280 140 L320 240" fill="none" stroke="var(--indigo)" stroke-width="1" opacity="0.15" />
+          
+          <!-- Scooter body - more pronounced -->
+          <path d="M100 220 C100 205, 125 195, 155 198 L210 210 C235 215, 242 232, 237 248 L110 248 C100 248, 100 233, 100 220" fill="var(--marigold)" stroke="var(--ink)" stroke-width="1.5" />
+          
+          <!-- Scooter details -->
+          <rect x="115" y="215" width="35" height="8" fill="var(--ink)" opacity="0.4" />
+          <circle cx="125" cy="248" r="20" fill="var(--ink)" />
+          <circle cx="125" cy="248" r="15" fill="var(--marigold)" opacity="0.3" />
+          <circle cx="215" cy="248" r="20" fill="var(--ink)" />
+          <circle cx="215" cy="248" r="15" fill="var(--marigold)" opacity="0.3" />
+          
+          <!-- Handlebar -->
+          <path d="M110 215 L95 175" stroke="var(--ink)" stroke-width="2" stroke-linecap="round" />
+          <ellipse cx="95" cy="172" rx="8" ry="6" fill="none" stroke="var(--ink)" stroke-width="1.5" />
+          
+          <!-- Front fender -->
+          <path d="M210 195 L225 215" stroke="var(--ink)" stroke-width="1.5" stroke-linecap="round" />
 
-          <!-- Rider -->
-          <circle cx="155" cy="155" r="12" fill="var(--paper)" stroke="var(--ink)" stroke-width="1.2" />
-          <path d="M150 167 L145 200 L165 200 L160 167" fill="var(--brick)" stroke="var(--ink)" stroke-width="1.2" opacity="0.85" />
-          <path d="M155 143 Q140 143, 140 155" stroke="var(--ink)" stroke-width="1.5" stroke-linecap="round" />
+          <!-- Driver head -->
+          <circle cx="145" cy="160" r="13" fill="var(--paper)" stroke="var(--ink)" stroke-width="1.2" />
+          <!-- Driver hair -->
+          <path d="M132 155 Q145 145, 158 155" fill="var(--brick)" stroke="var(--ink)" stroke-width="0.8" />
+          <!-- Driver body/jacket -->
+          <path d="M140 173 L135 210 L155 210 L150 173 Z" fill="var(--brick)" stroke="var(--ink)" stroke-width="1.2" opacity="0.85" />
+          <!-- Driver arms -->
+          <path d="M140 180 L95 190" stroke="var(--ink)" stroke-width="1.2" stroke-linecap="round" />
+          <path d="M150 180 L160 185" stroke="var(--ink)" stroke-width="1.2" stroke-linecap="round" />
 
-          <!-- Passenger, riding pillion -->
-          <path d="M220 185 C240 185, 260 170, 280 170" stroke="var(--ink)" stroke-width="1" stroke-dasharray="2 2" />
-          <circle cx="290" cy="170" r="10" fill="var(--paper)" stroke="var(--ink)" stroke-width="1.2" />
-          <path d="M290 180 L310 180" fill="var(--indigo)" stroke="var(--ink)" stroke-width="1" opacity="0.75" />
+          <!-- Passenger head -->
+          <circle cx="220" cy="165" r="11" fill="var(--paper)" stroke="var(--ink)" stroke-width="1.1" />
+          <!-- Passenger hair -->
+          <path d="M210 162 Q220 152, 230 162" fill="var(--moss)" stroke="var(--ink)" stroke-width="0.8" />
+          <!-- Passenger body -->
+          <path d="M216 176 L212 205 L228 205 L224 176 Z" fill="var(--moss)" stroke="var(--ink)" stroke-width="1.1" opacity="0.8" />
+          <!-- Passenger arms around driver -->
+          <path d="M215 183 L185 188" stroke="var(--ink)" stroke-width="1" stroke-linecap="round" opacity="0.7" />
+          <path d="M225 183 L240 180" stroke="var(--ink)" stroke-width="1" stroke-linecap="round" opacity="0.7" />
 
-          <!-- Balloons trailing behind -->
+          <!-- Wind/motion lines -->
+          <path d="M260 180 L285 180" stroke="var(--ink)" stroke-width="1" opacity="0.4" stroke-dasharray="2 2" />
+          <path d="M270 200 L295 200" stroke="var(--ink)" stroke-width="1" opacity="0.3" stroke-dasharray="2 2" />
+          <path d="M280 220 L305 220" stroke="var(--ink)" stroke-width="1" opacity="0.25" stroke-dasharray="2 2" />
+
+          <!-- Balloons trailing behind - adventure mood -->
           <g class="balloon" style="--d:0s">
-            <line x1="290" y1="160" x2="270" y2="80" stroke="var(--ink)" stroke-width="0.5" />
-            <ellipse cx="270" cy="70" rx="10" ry="14" fill="var(--brick)" stroke="var(--ink)" stroke-width="1" opacity="0.9" />
+            <line x1="240" y1="190" x2="265" y2="100" stroke="var(--ink)" stroke-width="0.8" opacity="0.6" />
+            <ellipse cx="265" cy="85" rx="12" ry="16" fill="var(--brick)" stroke="var(--ink)" stroke-width="1.2" opacity="0.9" />
+            <text x="265" y="92" font-size="10" text-anchor="middle" fill="var(--paper)" opacity="0.7">♥</text>
           </g>
           <g class="balloon" style="--d:.4s">
-            <line x1="290" y1="160" x2="295" y2="70" stroke="var(--ink)" stroke-width="0.5" />
-            <ellipse cx="295" cy="55" rx="10" ry="14" fill="var(--marigold)" stroke="var(--ink)" stroke-width="1" opacity="0.9" />
+            <line x1="240" y1="190" x2="285" y2="75" stroke="var(--ink)" stroke-width="0.8" opacity="0.6" />
+            <ellipse cx="285" cy="58" rx="12" ry="16" fill="var(--marigold)" stroke="var(--ink)" stroke-width="1.2" opacity="0.9" />
+            <text x="285" y="65" font-size="10" text-anchor="middle" fill="var(--ink)" opacity="0.7">★</text>
           </g>
           <g class="balloon" style="--d:.8s">
-            <line x1="290" y1="160" x2="320" y2="90" stroke="var(--ink)" stroke-width="0.5" />
-            <ellipse cx="320" cy="75" rx="10" ry="14" fill="var(--indigo)" stroke="var(--ink)" stroke-width="1" opacity="0.9" />
+            <line x1="240" y1="190" x2="305" y2="110" stroke="var(--ink)" stroke-width="0.8" opacity="0.6" />
+            <ellipse cx="305" cy="92" rx="12" ry="16" fill="var(--indigo)" stroke="var(--ink)" stroke-width="1.2" opacity="0.9" />
+            <text x="305" y="99" font-size="10" text-anchor="middle" fill="var(--paper)" opacity="0.7">✦</text>
           </g>
+
+          <!-- Sun/hope element -->
+          <circle cx="310" cy="40" r="18" fill="var(--marigold)" opacity="0.3" />
+          <circle cx="310" cy="40" r="14" fill="none" stroke="var(--marigold)" stroke-width="1" opacity="0.5" />
         </svg>
       </figure>
 
