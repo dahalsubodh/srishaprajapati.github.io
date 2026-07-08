@@ -53,7 +53,7 @@ body {
   margin-left: -240px;
   margin-top: -240px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(46,79,122,0.10) 0%, rgba(46,79,122,0) 70%);
+  background: radial-gradient(circle, rgba(221,162,62,0.05) 0%, rgba(221,162,62,0) 70%);
   pointer-events: none;
   z-index: 0;
   transition: left 0.12s ease-out, top 0.12s ease-out;
@@ -63,7 +63,7 @@ body {
   .cursor-glow { display: block; }
 }
 
-/* On touch devices, motion comes from a slow ambient drift instead of a cursor. */
+/* On touch devices, motion comes from a slow ambient drift instead of a cursor, but animations still play */
 @media (hover: none), (pointer: coarse) {
   body::before {
     content: "";
@@ -71,8 +71,8 @@ body {
     inset: -10%;
     z-index: 0;
     pointer-events: none;
-    background: radial-gradient(circle at 30% 20%, rgba(221,162,62,0.10), transparent 55%),
-                radial-gradient(circle at 75% 70%, rgba(46,79,122,0.10), transparent 55%);
+    background: radial-gradient(circle at 30% 20%, rgba(221,162,62,0.05), transparent 55%),
+                radial-gradient(circle at 75% 70%, rgba(46,79,122,0.05), transparent 55%);
     animation: drift 16s ease-in-out infinite;
   }
 }
